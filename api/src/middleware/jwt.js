@@ -8,7 +8,7 @@ const catchError = (err, res) => {
         return res.status(401).json({message: "unauthorized, access token was expired"});
     }
 
-    return res.sendStatus(401).json({message: "unauthorized"});
+    return res.status(401).json({message: "unauthorized"});
 }
 
 const verifyToken = (req, res, next) => {
